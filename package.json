@@ -1,0 +1,14 @@
+{
+  "name": "nextpatner-home",
+  "version": "1.0.0",
+  "description": "넥스트파트너 시니어 구직 플랫폼 웹사이트",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./src/index.css -o ./dist/index.css --watch",
+    "build": "npx tailwindcss -i ./src/index.css -o ./dist/index.css --minify"
+  },
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}

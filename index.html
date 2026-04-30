@@ -43,14 +43,16 @@
       </button>
       <!-- 프로필 -->
       <div class="flex items-center gap-2">
-        <div class="w-8 h-8 rounded-full bg-primary-100 flex items-center justify-center shrink-0">
-          <svg width="18" height="18" fill="none" stroke="#ff7f65" stroke-width="1.8" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0z"/>
-          </svg>
+        <div class="w-8 h-8 rounded-full bg-primary-100 overflow-hidden shrink-0">
+          <img src="https://i.pravatar.cc/32?img=12" alt="프로필" class="w-full h-full object-cover" />
         </div>
         <span class="text-base text-neutral-600">양인희님</span>
       </div>
-      <button class="np-btn np-btn-ghost np-btn-sm">로그아웃</button>
+      <button class="flex items-center justify-center w-10 h-10 text-neutral-400 rounded-button hover:bg-neutral-50 hover:text-neutral-800 transition-colors" aria-label="로그아웃">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/>
+        </svg>
+      </button>
     </div>
 
     <!-- Mobile: 햄버거 -->
@@ -62,29 +64,29 @@
   </div>
 </header>
 
+<div class="max-w-content mx-auto py-4 md:py-6 flex flex-col gap-4">
 
 <!-- ══════════════════════════════════════════
      HERO SECTION
 ══════════════════════════════════════════ -->
-<section class="bg-neutral-50 py-8 md:py-12">
-  <div class="w-full max-w-content mx-auto px-4 md:px-6 lg:px-8">
+<section class="border border-neutral-200 rounded-2xl overflow-hidden bg-neutral-0 py-8 md:py-12">
+  <div class="px-5 md:px-8">
 
+    <!-- 메인 카피 -->
+    <div class="mb-5">
+      <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-neutral-900 leading-tight mb-1">
+        중장년 맞춤 일자리,
+      </h1>
+      <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
+        <span class="text-primary-500">+AI파트너</span>가 구직 과정을 쉽고 간편하게 도와드립니다.
+      </h1>
+    </div>
+
+    <!-- 두 카드: items-stretch로 동일 높이 -->
     <div class="flex flex-col md:flex-row gap-6 items-stretch">
 
-      <!-- 왼쪽: 메인 카피 + 사용자 카드 -->
-      <div class="flex flex-col gap-4 flex-1 min-w-0">
-        <!-- 메인 카피 — 브레이크포인트별 크기 조정 -->
-        <div>
-          <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-neutral-900 leading-tight mb-1">
-            중장년 맞춤 일자리,
-          </h1>
-          <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
-            <span class="text-primary-500">+AI파트너</span>가 구직 과정을 쉽고 간편하게 도와드립니다.
-          </h1>
-        </div>
-
-        <!-- 사용자 인사 카드 -->
-        <div class="bg-neutral-0 rounded-card border border-neutral-200 p-5 flex flex-col gap-4">
+      <!-- 사용자 인사 카드 -->
+      <div class="bg-neutral-0 rounded-card border border-neutral-200 overflow-hidden p-5 flex flex-col gap-4 flex-1 min-w-0 min-h-[240px] md:min-h-[0]">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-3">
               <div class="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center shrink-0">
@@ -123,14 +125,12 @@
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- 오른쪽: 배너 슬라이더 -->
-      <div class="md:w-[300px] lg:w-[420px] shrink-0 rounded-card overflow-hidden relative min-h-[200px] md:min-h-[280px] lg:min-h-[0]" style="background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);">
+      <!-- 배너 슬라이더 -->
+      <div class="md:w-[300px] lg:w-[420px] shrink-0 rounded-card overflow-hidden relative min-h-[240px] md:min-h-[0]" style="background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);">
         <!-- 슬라이드 내용 -->
         <div class="flex flex-col justify-end h-full p-6 md:p-8">
           <div class="mb-4">
-            <span class="np-badge np-badge-primary mb-3 inline-block">스카우트 제안</span>
             <h2 class="text-2xl md:text-3xl font-bold text-neutral-0 leading-snug">
               당장 이직 생각은<br/>없어도<br/>
               <span class="text-primary-300">스카우트 제안은<br/>받아보세요</span>
@@ -163,10 +163,9 @@
 <!-- ══════════════════════════════════════════
      AI 추천 일자리
 ══════════════════════════════════════════ -->
-<div class="np-divider-thick"></div>
 
-<section class="py-10 md:py-16 bg-neutral-0">
-  <div class="w-full max-w-content mx-auto px-4 md:px-6 lg:px-8">
+<section class="border border-neutral-200 rounded-2xl overflow-hidden bg-neutral-0 py-10 md:py-16">
+  <div class="px-5 md:px-8">
 
     <!-- 섹션 헤더 -->
     <div class="flex items-start justify-between mb-2">
@@ -174,7 +173,7 @@
         <h2 class="text-2xl md:text-3xl font-bold text-neutral-900 mb-1">
           <span class="text-primary-500">양인희님</span>께 딱 맞는<br class="md:hidden"/> AI 추천 일자리입니다.
         </h2>
-        <p class="text-base text-neutral-400 leading-relaxed">양인희님의 경험과 조건에 맞는 일자리를 AI가 분석하여 추천해드립니다.<br class="hidden md:block"/>일자리 추천 이유를 확인해보세요.</p>
+        <p class="text-base text-neutral-400 leading-relaxed">양인희님의 경험에 맞는 일자리를 AI가 분석하여 추천해드립니다.</p>
       </div>
       <div class="flex items-center gap-3 shrink-0 ml-4 mt-1">
         <span class="text-sm text-neutral-400 font-medium hidden md:block">1 / 2</span>
@@ -194,89 +193,68 @@
 
       <!-- 카드 1: Recommended -->
       <div class="np-job-card np-job-card-recommended">
-        <div class="flex items-center justify-between mb-3">
-          <span class="np-job-card-badge">매칭률 94%</span>
-          <span class="np-job-card-urgency">D-3</span>
+        <span class="np-job-card-badge self-start mb-3">매칭률 94%</span>
+        <div class="flex items-center gap-2 mb-2">
+          <span class="np-job-card-company">기업명</span>
+          <span class="np-job-card-urgency">마감 D-3</span>
         </div>
-        <div class="flex items-start justify-between gap-2 mb-1">
-          <h3 class="np-job-card-title">영등포구 영동초 교실 미화1명 구인</h3>
-          <button class="np-job-card-bookmark" aria-label="저장">
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
-          </button>
+        <h3 class="np-job-card-title mb-3">영등포구 영동초 교실 미화1명 구인</h3>
+        <p class="np-job-card-meta mb-1">서울 마포구 | 파트타임 | 주 5일</p>
+        <p class="np-job-card-pay mb-3">연봉 3000만원 ~ 3500만원</p>
+        <div class="np-job-card-reasons-box mb-4">
+          <ul class="np-job-card-reasons">
+            <li class="np-job-card-reason">관련 직무 경력과 유사한 업무</li>
+            <li class="np-job-card-reason">거주지에서 대중교통 이용 가능</li>
+            <li class="np-job-card-reason">희망 근무 조건과 일치</li>
+          </ul>
         </div>
-        <p class="np-job-card-company mb-3">기업명 마감 D-3</p>
-        <div class="border-t border-neutral-100 mb-3"></div>
-        <p class="np-job-card-meta mb-1">서울 마포구 &nbsp;·&nbsp; 파트타임</p>
-        <p class="np-job-card-hours mb-3">주 5일 · 면봉 3000만원 ~ 3500만원</p>
-        <ul class="np-job-card-reasons mb-4">
-          <li class="np-job-card-reason">관련 직무 경력과 유사한 업무</li>
-          <li class="np-job-card-reason">거주지에서 대중교통 이용 가능</li>
-          <li class="np-job-card-reason">희망 근무 조건과 일치</li>
-        </ul>
         <button class="np-btn np-btn-grey-stroke np-btn-sm w-full mt-auto">자세히 보기</button>
       </div>
 
       <!-- 카드 2: Recommended -->
       <div class="np-job-card np-job-card-recommended">
-        <div class="flex items-center justify-between mb-3">
-          <span class="np-job-card-badge">매칭률 89%</span>
-          <span class="np-job-card-urgency">D-3</span>
+        <span class="np-job-card-badge self-start mb-3">매칭률 89%</span>
+        <div class="flex items-center gap-2 mb-2">
+          <span class="np-job-card-company">기업명</span>
+          <span class="np-job-card-urgency">마감 D-3</span>
         </div>
-        <div class="flex items-start justify-between gap-2 mb-1">
-          <h3 class="np-job-card-title">영등포구 영동초 교실 미화1명 구인</h3>
-          <button class="np-job-card-bookmark" aria-label="저장">
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
-          </button>
+        <h3 class="np-job-card-title mb-3">영등포구 영동초 교실 미화1명 구인</h3>
+        <p class="np-job-card-meta mb-1">서울 서초구 | 파트타임 | 주 5일</p>
+        <p class="np-job-card-pay mb-3">연봉 3000만원 ~ 3500만원</p>
+        <div class="np-job-card-reasons-box mb-4">
+          <ul class="np-job-card-reasons">
+            <li class="np-job-card-reason">서비스 업무 경력과 유사한 직무</li>
+            <li class="np-job-card-reason">거주지에서 도보 이동 가능</li>
+            <li class="np-job-card-reason">희망 근무 시간과 일치</li>
+          </ul>
         </div>
-        <p class="np-job-card-company mb-3">기업명 마감 D-3</p>
-        <div class="border-t border-neutral-100 mb-3"></div>
-        <p class="np-job-card-meta mb-1">서울 서초구 &nbsp;·&nbsp; 파트타임</p>
-        <p class="np-job-card-hours mb-3">주 5일 · 면봉 3000만원 ~ 3500만원</p>
-        <ul class="np-job-card-reasons mb-4">
-          <li class="np-job-card-reason">서비스 업무 경력과 유사한 직무</li>
-          <li class="np-job-card-reason">거주지에서 도보 이동 가능</li>
-          <li class="np-job-card-reason">희망 근무 시간과 일치</li>
-        </ul>
         <button class="np-btn np-btn-grey-stroke np-btn-sm w-full mt-auto">자세히 보기</button>
       </div>
 
       <!-- 카드 3: Recommended -->
       <div class="np-job-card np-job-card-recommended md:col-span-2 lg:col-span-1">
-        <div class="flex items-center justify-between mb-3">
-          <span class="np-job-card-badge">매칭률 89%</span>
-          <span class="np-job-card-urgency">D-3</span>
+        <span class="np-job-card-badge self-start mb-3">매칭률 89%</span>
+        <div class="flex items-center gap-2 mb-2">
+          <span class="np-job-card-company">기업명</span>
+          <span class="np-job-card-urgency">마감 D-3</span>
         </div>
-        <div class="flex items-start justify-between gap-2 mb-1">
-          <h3 class="np-job-card-title">영등포구 영동초 교실 미화1명 구인</h3>
-          <button class="np-job-card-bookmark" aria-label="저장">
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
-          </button>
+        <h3 class="np-job-card-title mb-3">영등포구 영동초 교실 미화1명 구인</h3>
+        <p class="np-job-card-meta mb-1">경기 화성시 | 파트타임 | 주 5일</p>
+        <p class="np-job-card-pay mb-3">연봉 3000만원 ~ 3500만원</p>
+        <div class="np-job-card-reasons-box mb-4">
+          <ul class="np-job-card-reasons">
+            <li class="np-job-card-reason">유사 업종 경력 보유</li>
+            <li class="np-job-card-reason">근무 시간대 조건 부합</li>
+            <li class="np-job-card-reason">근거리 교통망 연계 가능</li>
+          </ul>
         </div>
-        <p class="np-job-card-company mb-3">기업명 마감 D-3</p>
-        <div class="border-t border-neutral-100 mb-3"></div>
-        <p class="np-job-card-meta mb-1">경기 화성시 &nbsp;·&nbsp; 파트타임</p>
-        <p class="np-job-card-hours mb-3">주 5일 · 면봉 3000만원 ~ 3500만원</p>
-        <ul class="np-job-card-reasons mb-4">
-          <li class="np-job-card-reason">유사 업종 경력 보유</li>
-          <li class="np-job-card-reason">근무 시간대 조건 부합</li>
-          <li class="np-job-card-reason">근거리 교통망 연계 가능</li>
-        </ul>
         <button class="np-btn np-btn-grey-stroke np-btn-sm w-full mt-auto">자세히 보기</button>
       </div>
 
     </div>
-  </div>
-</section>
 
-
-<!-- ══════════════════════════════════════════
-     이력서 필터 조정 배너
-══════════════════════════════════════════ -->
-<div class="np-divider-thick"></div>
-
-<section class="py-8 md:py-10 bg-warm-grey-25">
-  <div class="w-full max-w-content mx-auto px-4 md:px-6 lg:px-8">
-    <div class="flex flex-col md:flex-row items-center md:justify-between gap-4">
+    <!-- 이력서 필터 조정 배너 -->
+    <div class="flex flex-col md:flex-row items-center md:justify-between gap-4 bg-primary-50 rounded-2xl px-5 md:px-8 py-6 mt-6">
       <div>
         <h3 class="text-xl font-bold text-neutral-900 mb-1">마음에 드는 일자리를 찾지 못하셨나요?</h3>
         <p class="text-base text-neutral-400 leading-relaxed">이력서를 새로 만들거나 수정하면 더 다양한 일자리를 추천받을 수 있어요.</p>
@@ -286,6 +264,7 @@
         <button class="np-btn np-btn-grey-stroke np-btn-md flex-1 md:flex-none">기존 이력서 수정</button>
       </div>
     </div>
+
   </div>
 </section>
 
@@ -293,16 +272,15 @@
 <!-- ══════════════════════════════════════════
      공공기관 일자리
 ══════════════════════════════════════════ -->
-<div class="np-divider-thick"></div>
 
-<section class="py-10 md:py-16 bg-neutral-0">
-  <div class="w-full max-w-content mx-auto px-4 md:px-6 lg:px-8">
+<section class="border border-neutral-200 rounded-2xl overflow-hidden bg-neutral-0 py-10 md:py-16">
+  <div class="px-5 md:px-8">
 
     <!-- 섹션 헤더 -->
     <div class="flex items-start justify-between mb-2">
       <div>
         <h2 class="text-2xl md:text-3xl font-bold text-neutral-900 mb-1">공공기관에서 제공하는 일자리를 확인해보세요.</h2>
-        <p class="text-base text-neutral-400 leading-relaxed">공공기관에서 운영하는 안정적인 일자리입니다.<br class="hidden md:block"/>근무 조건과 기간이 명확해 안심하고 지원할 수 있습니다.</p>
+        <p class="text-base text-neutral-400 leading-relaxed">안정적인 일자리를 안심하고 지원하세요.</p>
       </div>
       <div class="flex items-center gap-3 shrink-0 ml-4 mt-1">
         <span class="text-sm text-neutral-400 font-medium hidden md:block">1 / 2</span>
@@ -321,61 +299,40 @@
 
       <!-- 공공 카드 1 -->
       <div class="np-job-card">
-        <div class="flex items-center justify-between mb-3">
-          <span class="np-badge np-badge-info">공공기관</span>
-          <span class="np-job-card-deadline">약 26-00-00</span>
+        <div class="flex items-center gap-2 mb-2">
+          <span class="np-job-card-company">경기 화성시 병점구</span>
+          <span class="np-job-card-urgency">마감 26-00-00</span>
         </div>
-        <div class="flex items-start justify-between gap-2 mb-1">
-          <h3 class="np-job-card-title">[반월동]3등급 할아버지 케어하실 요양보호사 모집</h3>
-          <button class="np-job-card-bookmark" aria-label="저장">
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
-          </button>
-        </div>
-        <p class="np-job-card-company mb-3">경기 화성시 병점구</p>
-        <div class="border-t border-neutral-100 mb-3"></div>
-        <p class="np-job-card-meta mb-1">경기 화성시 &nbsp;·&nbsp; 공공일자리</p>
-        <p class="np-job-card-hours mb-3">연봉 3000만원 ~ 3500만원</p>
-        <p class="np-job-card-deadline mb-4">등록 26-00-00</p>
+        <h3 class="np-job-card-title mb-3">[반월동]3등급 할아버지 케어하실 요양보호사 모집</h3>
+        <p class="np-job-card-meta mb-1">경기 화성시 | 공공일자리</p>
+        <p class="np-job-card-pay mb-2">연봉 3000만원 ~ 3500만원</p>
+        <p class="np-job-card-register mb-4">등록 26-00-00</p>
         <button class="np-btn np-btn-grey-stroke np-btn-sm w-full mt-auto">자세히 보기</button>
       </div>
 
       <!-- 공공 카드 2 -->
       <div class="np-job-card">
-        <div class="flex items-center justify-between mb-3">
-          <span class="np-badge np-badge-info">공공기관</span>
-          <span class="np-job-card-deadline">약 26-00-00</span>
+        <div class="flex items-center gap-2 mb-2">
+          <span class="np-job-card-company">경기 화성시 병점구</span>
+          <span class="np-job-card-urgency">마감 26-00-00</span>
         </div>
-        <div class="flex items-start justify-between gap-2 mb-1">
-          <h3 class="np-job-card-title">[반월동]3등급 할아버지 케어하실 요양보호사 모집</h3>
-          <button class="np-job-card-bookmark" aria-label="저장">
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
-          </button>
-        </div>
-        <p class="np-job-card-company mb-3">경기 화성시 병점구</p>
-        <div class="border-t border-neutral-100 mb-3"></div>
-        <p class="np-job-card-meta mb-1">경기 화성시 &nbsp;·&nbsp; 공공일자리</p>
-        <p class="np-job-card-hours mb-3">연봉 3000만원 ~ 3500만원</p>
-        <p class="np-job-card-deadline mb-4">등록 26-00-00</p>
+        <h3 class="np-job-card-title mb-3">[반월동]3등급 할아버지 케어하실 요양보호사 모집</h3>
+        <p class="np-job-card-meta mb-1">경기 화성시 | 공공일자리</p>
+        <p class="np-job-card-pay mb-2">연봉 3000만원 ~ 3500만원</p>
+        <p class="np-job-card-register mb-4">등록 26-00-00</p>
         <button class="np-btn np-btn-grey-stroke np-btn-sm w-full mt-auto">자세히 보기</button>
       </div>
 
       <!-- 공공 카드 3 -->
       <div class="np-job-card md:col-span-2 lg:col-span-1">
-        <div class="flex items-center justify-between mb-3">
-          <span class="np-badge np-badge-info">공공기관</span>
-          <span class="np-job-card-deadline">약 26-00-00</span>
+        <div class="flex items-center gap-2 mb-2">
+          <span class="np-job-card-company">경기 화성시 병점구</span>
+          <span class="np-job-card-urgency">마감 26-00-00</span>
         </div>
-        <div class="flex items-start justify-between gap-2 mb-1">
-          <h3 class="np-job-card-title">[반월동]3등급 할아버지 케어하실 요양보호사 모집</h3>
-          <button class="np-job-card-bookmark" aria-label="저장">
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
-          </button>
-        </div>
-        <p class="np-job-card-company mb-3">경기 화성시 병점구</p>
-        <div class="border-t border-neutral-100 mb-3"></div>
-        <p class="np-job-card-meta mb-1">경기 화성시 &nbsp;·&nbsp; 공공일자리</p>
-        <p class="np-job-card-hours mb-3">연봉 3000만원 ~ 3500만원</p>
-        <p class="np-job-card-deadline mb-4">등록 26-00-00</p>
+        <h3 class="np-job-card-title mb-3">[반월동]3등급 할아버지 케어하실 요양보호사 모집</h3>
+        <p class="np-job-card-meta mb-1">경기 화성시 | 공공일자리</p>
+        <p class="np-job-card-pay mb-2">연봉 3000만원 ~ 3500만원</p>
+        <p class="np-job-card-register mb-4">등록 26-00-00</p>
         <button class="np-btn np-btn-grey-stroke np-btn-sm w-full mt-auto">자세히 보기</button>
       </div>
 
@@ -387,12 +344,192 @@
 <!-- ══════════════════════════════════════════
      이벤트 배너
 ══════════════════════════════════════════ -->
-<section class="bg-primary-500 py-16 md:py-20 flex items-center justify-center">
-  <div class="w-full max-w-content mx-auto px-4 md:px-6 lg:px-8 text-center">
-    <p class="text-sm font-bold text-primary-100 uppercase tracking-widest mb-3">이벤트</p>
-    <h2 class="text-3xl md:text-4xl font-bold text-neutral-0 mb-4">이력서 등록하고<br/>취업 성공 지원금 받으세요</h2>
-    <p class="text-lg text-primary-100 mb-8">지금 이력서를 등록하면 취업 지원금 최대 50만원을 받을 수 있어요.</p>
-    <button class="np-btn np-btn-md bg-neutral-0 text-primary-500 hover:bg-primary-50 rounded-button border-0 font-bold px-8">이벤트 자세히 보기</button>
+<section class="border border-neutral-200 rounded-2xl overflow-hidden relative">
+  <img
+    src="https://picsum.photos/seed/nextpartner-dark/1212/200?grayscale"
+    alt="이벤트 배너"
+    class="w-full h-[120px] md:h-[160px] lg:h-[200px] object-cover block"
+  />
+  <!-- 어두운 오버레이 -->
+  <div class="absolute inset-0 bg-neutral-900/60"></div>
+  <!-- 텍스트 + 버튼 -->
+  <div class="absolute inset-0 flex items-center justify-between px-6 md:px-10">
+    <p class="text-lg md:text-2xl font-bold text-neutral-0">이력서 등록하고 취업 성공 지원금 최대 50만원 받으세요</p>
+    <button class="np-btn np-btn-md shrink-0 ml-6 bg-neutral-0 text-neutral-900 hover:bg-neutral-100 border-0 font-bold">이벤트 바로가기</button>
+  </div>
+</section>
+
+
+
+
+<!-- ══════════════════════════════════════════
+     구직 정보 (탭 + 카드)
+══════════════════════════════════════════ -->
+
+<section class="border border-neutral-200 rounded-2xl overflow-hidden bg-neutral-0 py-10 md:py-16">
+  <div class="px-5 md:px-8">
+
+    <!-- 섹션 헤더 -->
+    <div class="flex items-center justify-between mb-6">
+      <h2 class="text-2xl md:text-3xl font-bold text-neutral-900">구직에 도움이 되는 정보를 확인해보세요.</h2>
+      <a class="flex items-center gap-1 text-base text-primary-500 font-semibold hover:text-primary-400 transition-colors cursor-pointer shrink-0 ml-4">
+        구직 정보 더보기
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <!-- 탭 바 -->
+    <div class="np-tab-bar mb-6" id="info-tab-bar">
+      <div class="np-tab-item active" data-tab="info-all">전체</div>
+      <div class="np-tab-item" data-tab="info-resume">이력서 작성</div>
+      <div class="np-tab-item" data-tab="info-interview">면접 준비</div>
+      <div class="np-tab-item" data-tab="info-career">경력 관리</div>
+      <div class="np-tab-item" data-tab="info-welfare">복지·혜택</div>
+    </div>
+
+    <!-- 카드 그리드 (일회성 요소 → 유틸리티 사용) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+      <article class="bg-neutral-0 rounded-card border border-neutral-200 overflow-hidden cursor-pointer hover:shadow-md transition-shadow group">
+        <div class="aspect-video bg-neutral-200 overflow-hidden">
+          <div class="w-full h-full bg-gradient-to-br from-neutral-200 to-neutral-300 flex items-center justify-center">
+            <span class="text-neutral-400 text-sm">이미지</span>
+          </div>
+        </div>
+        <div class="p-4">
+          <span class="np-badge np-badge-neutral mb-3 inline-block">카테고리명</span>
+          <h4 class="text-lg font-bold text-neutral-900 leading-snug mb-2 group-hover:text-primary-500 transition-colors line-clamp-2">AI와 함께 디자이너 커리어 확장하는 방법 최대 두줄까지 노출</h4>
+          <p class="text-sm text-neutral-400">26-04-01</p>
+        </div>
+      </article>
+
+      <article class="bg-neutral-0 rounded-card border border-neutral-200 overflow-hidden cursor-pointer hover:shadow-md transition-shadow group">
+        <div class="aspect-video bg-neutral-200 overflow-hidden">
+          <div class="w-full h-full bg-gradient-to-br from-warm-grey-100 to-warm-grey-200 flex items-center justify-center">
+            <span class="text-neutral-400 text-sm">이미지</span>
+          </div>
+        </div>
+        <div class="p-4">
+          <span class="np-badge np-badge-neutral mb-3 inline-block">카테고리명</span>
+          <h4 class="text-lg font-bold text-neutral-900 leading-snug mb-2 group-hover:text-primary-500 transition-colors line-clamp-2">AI와 함께 디자이너 커리어 확장하는 방법 최대 두줄까지 노출</h4>
+          <p class="text-sm text-neutral-400">26-04-01</p>
+        </div>
+      </article>
+
+      <article class="bg-neutral-0 rounded-card border border-neutral-200 overflow-hidden cursor-pointer hover:shadow-md transition-shadow group md:col-span-2 lg:col-span-1">
+        <div class="aspect-video bg-neutral-200 overflow-hidden">
+          <div class="w-full h-full bg-gradient-to-br from-primary-50 to-primary-100 flex items-center justify-center">
+            <span class="text-neutral-400 text-sm">이미지</span>
+          </div>
+        </div>
+        <div class="p-4">
+          <span class="np-badge np-badge-neutral mb-3 inline-block">카테고리명</span>
+          <h4 class="text-lg font-bold text-neutral-900 leading-snug mb-2 group-hover:text-primary-500 transition-colors line-clamp-2">AI와 함께 디자이너 커리어 확장하는 방법 최대 두줄까지 노출</h4>
+          <p class="text-sm text-neutral-400">26-04-01</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     일자리 관련 기사
+══════════════════════════════════════════ -->
+
+<section class="border border-neutral-200 rounded-2xl overflow-hidden bg-neutral-0 py-10 md:py-16">
+  <div class="px-5 md:px-8">
+
+    
+    <!-- 섹션 헤더 -->
+    <div class="flex items-center justify-between mb-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-neutral-900">일자리 관련 기사를 확인해보세요.</h2>
+      <a class="flex items-center gap-1 text-base text-primary-500 font-semibold hover:text-primary-400 transition-colors cursor-pointer shrink-0 ml-4">
+        보도자료 더보기
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <!-- 기사 그리드 (일회성 요소 → 유틸리티 사용) -->
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+
+      <!-- 기사 카드 × 8 -->
+      <article class="cursor-pointer group">
+        <div class="aspect-video bg-neutral-100 rounded-card overflow-hidden mb-3">
+          <div class="w-full h-full bg-gradient-to-br from-neutral-100 to-neutral-200 group-hover:scale-105 transition-transform duration-300"></div>
+        </div>
+        <h4 class="text-base font-semibold text-neutral-900 leading-snug mb-1 group-hover:text-primary-500 transition-colors line-clamp-2">기업은 왜 백년라이프 라이프 시니어를 주목할까? 최대 2줄까지…</h4>
+        <p class="text-sm text-neutral-400">출처명</p>
+      </article>
+
+      <article class="cursor-pointer group">
+        <div class="aspect-video bg-neutral-100 rounded-card overflow-hidden mb-3">
+          <div class="w-full h-full bg-gradient-to-br from-warm-grey-50 to-warm-grey-100 group-hover:scale-105 transition-transform duration-300"></div>
+        </div>
+        <span class="text-xs font-bold text-primary-500 mb-1 block">카테고리명</span>
+        <h4 class="text-base font-semibold text-neutral-900 leading-snug mb-1 group-hover:text-primary-500 transition-colors line-clamp-2">기업은 왜 백년라이프 라이프 시니어를 주목할까? 최대 2줄까지…</h4>
+        <p class="text-sm text-neutral-400">출처명</p>
+      </article>
+
+      <article class="cursor-pointer group">
+        <div class="aspect-video bg-neutral-100 rounded-card overflow-hidden mb-3">
+          <div class="w-full h-full bg-gradient-to-br from-primary-50 to-primary-100 group-hover:scale-105 transition-transform duration-300"></div>
+        </div>
+        <span class="text-xs font-bold text-primary-500 mb-1 block">카테고리명</span>
+        <h4 class="text-base font-semibold text-neutral-900 leading-snug mb-1 group-hover:text-primary-500 transition-colors line-clamp-2">기업은 왜 백년라이프 라이프 시니어를 주목할까? 최대 2줄까지…</h4>
+        <p class="text-sm text-neutral-400">출처명</p>
+      </article>
+
+      <!-- 기사 4: 모바일 표시, 태블릿+ 표시 -->
+      <article class="cursor-pointer group">
+        <div class="aspect-video bg-neutral-100 rounded-card overflow-hidden mb-3">
+          <div class="w-full h-full bg-gradient-to-br from-neutral-200 to-neutral-300 group-hover:scale-105 transition-transform duration-300"></div>
+        </div>
+        <span class="text-xs font-bold text-primary-500 mb-1 block">카테고리명</span>
+        <h4 class="text-base font-semibold text-neutral-900 leading-snug mb-1 group-hover:text-primary-500 transition-colors line-clamp-2">기업은 왜 백년라이프 라이프 시니어를 주목할까? 최대 2줄까지…</h4>
+        <p class="text-sm text-neutral-400">출처명</p>
+      </article>
+
+      <!-- 기사 5~6: 태블릿부터 표시 (md: 3열 2행 완성) -->
+      <article class="cursor-pointer group hidden md:block">
+        <div class="aspect-video bg-neutral-100 rounded-card overflow-hidden mb-3">
+          <div class="w-full h-full bg-gradient-to-br from-neutral-100 to-warm-grey-100 group-hover:scale-105 transition-transform duration-300"></div>
+        </div>
+        <span class="text-xs font-bold text-primary-500 mb-1 block">카테고리명</span>
+        <h4 class="text-base font-semibold text-neutral-900 leading-snug mb-1 group-hover:text-primary-500 transition-colors line-clamp-2">기업은 왜 백년라이프 라이프 시니어를 주목할까? 최대 2줄까지…</h4>
+        <p class="text-sm text-neutral-400">출처명</p>
+      </article>
+
+      <article class="cursor-pointer group hidden md:block">
+        <div class="aspect-video bg-neutral-100 rounded-card overflow-hidden mb-3">
+          <div class="w-full h-full bg-gradient-to-br from-primary-100 to-warm-grey-50 group-hover:scale-105 transition-transform duration-300"></div>
+        </div>
+        <span class="text-xs font-bold text-primary-500 mb-1 block">카테고리명</span>
+        <h4 class="text-base font-semibold text-neutral-900 leading-snug mb-1 group-hover:text-primary-500 transition-colors line-clamp-2">기업은 왜 백년라이프 라이프 시니어를 주목할까? 최대 2줄까지…</h4>
+        <p class="text-sm text-neutral-400">출처명</p>
+      </article>
+
+      <!-- 기사 7~8: 데스크탑부터 표시 (lg: 4열 2행 완성) -->
+      <article class="cursor-pointer group hidden lg:block">
+        <div class="aspect-video bg-neutral-100 rounded-card overflow-hidden mb-3">
+          <div class="w-full h-full bg-gradient-to-br from-neutral-50 to-neutral-200 group-hover:scale-105 transition-transform duration-300"></div>
+        </div>
+        <span class="text-xs font-bold text-primary-500 mb-1 block">카테고리명</span>
+        <h4 class="text-base font-semibold text-neutral-900 leading-snug mb-1 group-hover:text-primary-500 transition-colors line-clamp-2">기업은 왜 백년라이프 라이프 시니어를 주목할까? 최대 2줄까지…</h4>
+        <p class="text-sm text-neutral-400">출처명</p>
+      </article>
+
+      <article class="cursor-pointer group hidden lg:block">
+        <div class="aspect-video bg-neutral-100 rounded-card overflow-hidden mb-3">
+          <div class="w-full h-full bg-gradient-to-br from-warm-grey-100 to-neutral-200 group-hover:scale-105 transition-transform duration-300"></div>
+        </div>
+        <span class="text-xs font-bold text-primary-500 mb-1 block">카테고리명</span>
+        <h4 class="text-base font-semibold text-neutral-900 leading-snug mb-1 group-hover:text-primary-500 transition-colors line-clamp-2">기업은 왜 백년라이프 라이프 시니어를 주목할까? 최대 2줄까지…</h4>
+        <p class="text-sm text-neutral-400">출처명</p>
+      </article>
+
+    </div>
   </div>
 </section>
 
@@ -400,10 +537,8 @@
 <!-- ══════════════════════════════════════════
      공지사항 + 고객센터
 ══════════════════════════════════════════ -->
-<div class="np-divider-thick"></div>
-
-<section class="py-10 md:py-16 bg-neutral-0">
-  <div class="w-full max-w-content mx-auto px-4 md:px-6 lg:px-8">
+<section class="border border-neutral-200 rounded-2xl overflow-hidden bg-neutral-0 py-10 md:py-16">
+  <div class="px-5 md:px-8">
     <div class="flex flex-col md:flex-row gap-6 md:gap-8">
 
       <!-- 공지사항 -->
@@ -479,179 +614,7 @@
 </section>
 
 
-<!-- ══════════════════════════════════════════
-     구직 정보 (탭 + 카드)
-══════════════════════════════════════════ -->
-<div class="np-divider-thick"></div>
-
-<section class="py-10 md:py-16 bg-neutral-50">
-  <div class="w-full max-w-content mx-auto px-4 md:px-6 lg:px-8">
-
-    <!-- 섹션 헤더 -->
-    <div class="flex items-center justify-between mb-6">
-      <h2 class="text-2xl md:text-3xl font-bold text-neutral-900">구직에 도움이 되는 정보를 확인해보세요.</h2>
-      <a class="flex items-center gap-1 text-base text-primary-500 font-semibold hover:text-primary-400 transition-colors cursor-pointer shrink-0 ml-4">
-        구직 정보 더보기
-        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-      </a>
-    </div>
-
-    <!-- 탭 바 -->
-    <div class="np-tab-bar mb-6" id="info-tab-bar">
-      <div class="np-tab-item active" data-tab="info-all">전체</div>
-      <div class="np-tab-item" data-tab="info-resume">이력서 작성</div>
-      <div class="np-tab-item" data-tab="info-interview">면접 준비</div>
-      <div class="np-tab-item" data-tab="info-career">경력 관리</div>
-      <div class="np-tab-item" data-tab="info-welfare">복지·혜택</div>
-    </div>
-
-    <!-- 카드 그리드 (일회성 요소 → 유틸리티 사용) -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-
-      <article class="bg-neutral-0 rounded-card border border-neutral-200 overflow-hidden cursor-pointer hover:shadow-md transition-shadow group">
-        <div class="aspect-video bg-neutral-200 overflow-hidden">
-          <div class="w-full h-full bg-gradient-to-br from-neutral-200 to-neutral-300 flex items-center justify-center">
-            <span class="text-neutral-400 text-sm">이미지</span>
-          </div>
-        </div>
-        <div class="p-4">
-          <span class="np-badge np-badge-neutral mb-3 inline-block">카테고리명</span>
-          <h4 class="text-lg font-bold text-neutral-900 leading-snug mb-2 group-hover:text-primary-500 transition-colors line-clamp-2">AI와 함께 디자이너 커리어 확장하는 방법 최대 두줄까지 노출</h4>
-          <p class="text-sm text-neutral-400">26-04-01</p>
-        </div>
-      </article>
-
-      <article class="bg-neutral-0 rounded-card border border-neutral-200 overflow-hidden cursor-pointer hover:shadow-md transition-shadow group">
-        <div class="aspect-video bg-neutral-200 overflow-hidden">
-          <div class="w-full h-full bg-gradient-to-br from-warm-grey-100 to-warm-grey-200 flex items-center justify-center">
-            <span class="text-neutral-400 text-sm">이미지</span>
-          </div>
-        </div>
-        <div class="p-4">
-          <span class="np-badge np-badge-neutral mb-3 inline-block">카테고리명</span>
-          <h4 class="text-lg font-bold text-neutral-900 leading-snug mb-2 group-hover:text-primary-500 transition-colors line-clamp-2">AI와 함께 디자이너 커리어 확장하는 방법 최대 두줄까지 노출</h4>
-          <p class="text-sm text-neutral-400">26-04-01</p>
-        </div>
-      </article>
-
-      <article class="bg-neutral-0 rounded-card border border-neutral-200 overflow-hidden cursor-pointer hover:shadow-md transition-shadow group md:col-span-2 lg:col-span-1">
-        <div class="aspect-video bg-neutral-200 overflow-hidden">
-          <div class="w-full h-full bg-gradient-to-br from-primary-50 to-primary-100 flex items-center justify-center">
-            <span class="text-neutral-400 text-sm">이미지</span>
-          </div>
-        </div>
-        <div class="p-4">
-          <span class="np-badge np-badge-neutral mb-3 inline-block">카테고리명</span>
-          <h4 class="text-lg font-bold text-neutral-900 leading-snug mb-2 group-hover:text-primary-500 transition-colors line-clamp-2">AI와 함께 디자이너 커리어 확장하는 방법 최대 두줄까지 노출</h4>
-          <p class="text-sm text-neutral-400">26-04-01</p>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════════════════
-     일자리 관련 기사
-══════════════════════════════════════════ -->
-<div class="np-divider-thick"></div>
-
-<section class="py-10 md:py-16 bg-neutral-0">
-  <div class="w-full max-w-content mx-auto px-4 md:px-6 lg:px-8">
-
-    <!-- 섹션 헤더 -->
-    <div class="flex items-center justify-between mb-8">
-      <h2 class="text-2xl md:text-3xl font-bold text-neutral-900">일자리 관련 기사를 확인해보세요.</h2>
-      <a class="flex items-center gap-1 text-base text-primary-500 font-semibold hover:text-primary-400 transition-colors cursor-pointer shrink-0 ml-4">
-        컨텐츠 더보기
-        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-      </a>
-    </div>
-
-    <!-- 기사 그리드 (일회성 요소 → 유틸리티 사용) -->
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-
-      <!-- 기사 카드 × 8 -->
-      <article class="cursor-pointer group">
-        <div class="aspect-video bg-neutral-100 rounded-card overflow-hidden mb-3">
-          <div class="w-full h-full bg-gradient-to-br from-neutral-100 to-neutral-200 group-hover:scale-105 transition-transform duration-300"></div>
-        </div>
-        <span class="text-xs font-bold text-primary-500 mb-1 block">카테고리명</span>
-        <h4 class="text-base font-semibold text-neutral-900 leading-snug mb-1 group-hover:text-primary-500 transition-colors line-clamp-2">기업은 왜 백년라이프 라이프 시니어를 주목할까? 최대 2줄까지…</h4>
-        <p class="text-sm text-neutral-400">사이트5</p>
-      </article>
-
-      <article class="cursor-pointer group">
-        <div class="aspect-video bg-neutral-100 rounded-card overflow-hidden mb-3">
-          <div class="w-full h-full bg-gradient-to-br from-warm-grey-50 to-warm-grey-100 group-hover:scale-105 transition-transform duration-300"></div>
-        </div>
-        <span class="text-xs font-bold text-primary-500 mb-1 block">카테고리명</span>
-        <h4 class="text-base font-semibold text-neutral-900 leading-snug mb-1 group-hover:text-primary-500 transition-colors line-clamp-2">기업은 왜 백년라이프 라이프 시니어를 주목할까? 최대 2줄까지…</h4>
-        <p class="text-sm text-neutral-400">사이트5</p>
-      </article>
-
-      <article class="cursor-pointer group">
-        <div class="aspect-video bg-neutral-100 rounded-card overflow-hidden mb-3">
-          <div class="w-full h-full bg-gradient-to-br from-primary-50 to-primary-100 group-hover:scale-105 transition-transform duration-300"></div>
-        </div>
-        <span class="text-xs font-bold text-primary-500 mb-1 block">카테고리명</span>
-        <h4 class="text-base font-semibold text-neutral-900 leading-snug mb-1 group-hover:text-primary-500 transition-colors line-clamp-2">기업은 왜 백년라이프 라이프 시니어를 주목할까? 최대 2줄까지…</h4>
-        <p class="text-sm text-neutral-400">사이트5</p>
-      </article>
-
-      <!-- 기사 4: 모바일 표시, 태블릿+ 표시 -->
-      <article class="cursor-pointer group">
-        <div class="aspect-video bg-neutral-100 rounded-card overflow-hidden mb-3">
-          <div class="w-full h-full bg-gradient-to-br from-neutral-200 to-neutral-300 group-hover:scale-105 transition-transform duration-300"></div>
-        </div>
-        <span class="text-xs font-bold text-primary-500 mb-1 block">카테고리명</span>
-        <h4 class="text-base font-semibold text-neutral-900 leading-snug mb-1 group-hover:text-primary-500 transition-colors line-clamp-2">기업은 왜 백년라이프 라이프 시니어를 주목할까? 최대 2줄까지…</h4>
-        <p class="text-sm text-neutral-400">사이트5</p>
-      </article>
-
-      <!-- 기사 5~6: 태블릿부터 표시 (md: 3열 2행 완성) -->
-      <article class="cursor-pointer group hidden md:block">
-        <div class="aspect-video bg-neutral-100 rounded-card overflow-hidden mb-3">
-          <div class="w-full h-full bg-gradient-to-br from-neutral-100 to-warm-grey-100 group-hover:scale-105 transition-transform duration-300"></div>
-        </div>
-        <span class="text-xs font-bold text-primary-500 mb-1 block">카테고리명</span>
-        <h4 class="text-base font-semibold text-neutral-900 leading-snug mb-1 group-hover:text-primary-500 transition-colors line-clamp-2">기업은 왜 백년라이프 라이프 시니어를 주목할까? 최대 2줄까지…</h4>
-        <p class="text-sm text-neutral-400">사이트5</p>
-      </article>
-
-      <article class="cursor-pointer group hidden md:block">
-        <div class="aspect-video bg-neutral-100 rounded-card overflow-hidden mb-3">
-          <div class="w-full h-full bg-gradient-to-br from-primary-100 to-warm-grey-50 group-hover:scale-105 transition-transform duration-300"></div>
-        </div>
-        <span class="text-xs font-bold text-primary-500 mb-1 block">카테고리명</span>
-        <h4 class="text-base font-semibold text-neutral-900 leading-snug mb-1 group-hover:text-primary-500 transition-colors line-clamp-2">기업은 왜 백년라이프 라이프 시니어를 주목할까? 최대 2줄까지…</h4>
-        <p class="text-sm text-neutral-400">사이트5</p>
-      </article>
-
-      <!-- 기사 7~8: 데스크탑부터 표시 (lg: 4열 2행 완성) -->
-      <article class="cursor-pointer group hidden lg:block">
-        <div class="aspect-video bg-neutral-100 rounded-card overflow-hidden mb-3">
-          <div class="w-full h-full bg-gradient-to-br from-neutral-50 to-neutral-200 group-hover:scale-105 transition-transform duration-300"></div>
-        </div>
-        <span class="text-xs font-bold text-primary-500 mb-1 block">카테고리명</span>
-        <h4 class="text-base font-semibold text-neutral-900 leading-snug mb-1 group-hover:text-primary-500 transition-colors line-clamp-2">기업은 왜 백년라이프 라이프 시니어를 주목할까? 최대 2줄까지…</h4>
-        <p class="text-sm text-neutral-400">사이트5</p>
-      </article>
-
-      <article class="cursor-pointer group hidden lg:block">
-        <div class="aspect-video bg-neutral-100 rounded-card overflow-hidden mb-3">
-          <div class="w-full h-full bg-gradient-to-br from-warm-grey-100 to-neutral-200 group-hover:scale-105 transition-transform duration-300"></div>
-        </div>
-        <span class="text-xs font-bold text-primary-500 mb-1 block">카테고리명</span>
-        <h4 class="text-base font-semibold text-neutral-900 leading-snug mb-1 group-hover:text-primary-500 transition-colors line-clamp-2">기업은 왜 백년라이프 라이프 시니어를 주목할까? 최대 2줄까지…</h4>
-        <p class="text-sm text-neutral-400">사이트5</p>
-      </article>
-
-    </div>
-  </div>
-</section>
-
+</div><!-- /section cards wrapper -->
 
 <!-- ══════════════════════════════════════════
      FOOTER

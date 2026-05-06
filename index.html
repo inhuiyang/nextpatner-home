@@ -444,75 +444,55 @@
       </a>
     </div>
 
-    <!-- 기사 그리드 (일회성 요소 → 유틸리티 사용) -->
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <!-- 기사 리스트 (2열 3행) -->
+    <div class="grid grid-cols-2 gap-x-8">
 
-      <!-- 기사 카드 × 8 -->
-      <article class="cursor-pointer group">
-        <div class="aspect-video bg-neutral-100 rounded-card overflow-hidden mb-3">
-          <div class="w-full h-full bg-gradient-to-br from-neutral-100 to-neutral-200 group-hover:scale-105 transition-transform duration-300"></div>
+      <article class="cursor-pointer group flex items-center justify-between gap-4 py-4 border-b border-neutral-100">
+        <div class="min-w-0">
+          <h4 class="text-lg font-semibold text-neutral-900 leading-snug mb-1 group-hover:text-primary-500 transition-colors line-clamp-1">기업은 왜 백년라이프 라이프 시니어를 주목할까? 최대 2줄까지…</h4>
+          <p class="text-sm text-neutral-400">출처명</p>
         </div>
-        <h4 class="text-base font-semibold text-neutral-900 leading-snug mb-1 group-hover:text-primary-500 transition-colors line-clamp-2">기업은 왜 백년라이프 라이프 시니어를 주목할까? 최대 2줄까지…</h4>
-        <p class="text-sm text-neutral-400">출처명</p>
+        <i data-lucide="chevron-right" class="text-neutral-300 shrink-0" style="width:20px;height:20px;"></i>
       </article>
 
-      <article class="cursor-pointer group">
-        <div class="aspect-video bg-neutral-100 rounded-card overflow-hidden mb-3">
-          <div class="w-full h-full bg-gradient-to-br from-warm-grey-50 to-warm-grey-100 group-hover:scale-105 transition-transform duration-300"></div>
+      <article class="cursor-pointer group flex items-center justify-between gap-4 py-4 border-b border-neutral-100">
+        <div class="min-w-0">
+          <h4 class="text-lg font-semibold text-neutral-900 leading-snug mb-1 group-hover:text-primary-500 transition-colors line-clamp-1">기업은 왜 백년라이프 라이프 시니어를 주목할까? 최대 2줄까지…</h4>
+          <p class="text-sm text-neutral-400">출처명</p>
         </div>
-        <h4 class="text-base font-semibold text-neutral-900 leading-snug mb-1 group-hover:text-primary-500 transition-colors line-clamp-2">기업은 왜 백년라이프 라이프 시니어를 주목할까? 최대 2줄까지…</h4>
-        <p class="text-sm text-neutral-400">출처명</p>
+        <i data-lucide="chevron-right" class="text-neutral-300 shrink-0" style="width:20px;height:20px;"></i>
       </article>
 
-      <article class="cursor-pointer group">
-        <div class="aspect-video bg-neutral-100 rounded-card overflow-hidden mb-3">
-          <div class="w-full h-full bg-gradient-to-br from-primary-50 to-primary-100 group-hover:scale-105 transition-transform duration-300"></div>
+      <article class="cursor-pointer group flex items-center justify-between gap-4 py-4 border-b border-neutral-100">
+        <div class="min-w-0">
+          <h4 class="text-lg font-semibold text-neutral-900 leading-snug mb-1 group-hover:text-primary-500 transition-colors line-clamp-1">기업은 왜 백년라이프 라이프 시니어를 주목할까? 최대 2줄까지…</h4>
+          <p class="text-sm text-neutral-400">출처명</p>
         </div>
-        <h4 class="text-base font-semibold text-neutral-900 leading-snug mb-1 group-hover:text-primary-500 transition-colors line-clamp-2">기업은 왜 백년라이프 라이프 시니어를 주목할까? 최대 2줄까지…</h4>
-        <p class="text-sm text-neutral-400">출처명</p>
+        <i data-lucide="chevron-right" class="text-neutral-300 shrink-0" style="width:20px;height:20px;"></i>
       </article>
 
-      <!-- 기사 4: 모바일 표시, 태블릿+ 표시 -->
-      <article class="cursor-pointer group">
-        <div class="aspect-video bg-neutral-100 rounded-card overflow-hidden mb-3">
-          <div class="w-full h-full bg-gradient-to-br from-neutral-200 to-neutral-300 group-hover:scale-105 transition-transform duration-300"></div>
+      <article class="cursor-pointer group flex items-center justify-between gap-4 py-4 border-b border-neutral-100">
+        <div class="min-w-0">
+          <h4 class="text-lg font-semibold text-neutral-900 leading-snug mb-1 group-hover:text-primary-500 transition-colors line-clamp-1">기업은 왜 백년라이프 라이프 시니어를 주목할까? 최대 2줄까지…</h4>
+          <p class="text-sm text-neutral-400">출처명</p>
         </div>
-        <h4 class="text-base font-semibold text-neutral-900 leading-snug mb-1 group-hover:text-primary-500 transition-colors line-clamp-2">기업은 왜 백년라이프 라이프 시니어를 주목할까? 최대 2줄까지…</h4>
-        <p class="text-sm text-neutral-400">출처명</p>
+        <i data-lucide="chevron-right" class="text-neutral-300 shrink-0" style="width:20px;height:20px;"></i>
       </article>
 
-      <!-- 기사 5~6: 태블릿부터 표시 (md: 3열 2행 완성) -->
-      <article class="cursor-pointer group hidden md:block">
-        <div class="aspect-video bg-neutral-100 rounded-card overflow-hidden mb-3">
-          <div class="w-full h-full bg-gradient-to-br from-neutral-100 to-warm-grey-100 group-hover:scale-105 transition-transform duration-300"></div>
+      <article class="cursor-pointer group flex items-center justify-between gap-4 py-4">
+        <div class="min-w-0">
+          <h4 class="text-lg font-semibold text-neutral-900 leading-snug mb-1 group-hover:text-primary-500 transition-colors line-clamp-1">기업은 왜 백년라이프 라이프 시니어를 주목할까? 최대 2줄까지…</h4>
+          <p class="text-sm text-neutral-400">출처명</p>
         </div>
-        <h4 class="text-base font-semibold text-neutral-900 leading-snug mb-1 group-hover:text-primary-500 transition-colors line-clamp-2">기업은 왜 백년라이프 라이프 시니어를 주목할까? 최대 2줄까지…</h4>
-        <p class="text-sm text-neutral-400">출처명</p>
+        <i data-lucide="chevron-right" class="text-neutral-300 shrink-0" style="width:20px;height:20px;"></i>
       </article>
 
-      <article class="cursor-pointer group hidden md:block">
-        <div class="aspect-video bg-neutral-100 rounded-card overflow-hidden mb-3">
-          <div class="w-full h-full bg-gradient-to-br from-primary-100 to-warm-grey-50 group-hover:scale-105 transition-transform duration-300"></div>
+      <article class="cursor-pointer group flex items-center justify-between gap-4 py-4">
+        <div class="min-w-0">
+          <h4 class="text-lg font-semibold text-neutral-900 leading-snug mb-1 group-hover:text-primary-500 transition-colors line-clamp-1">기업은 왜 백년라이프 라이프 시니어를 주목할까? 최대 2줄까지…</h4>
+          <p class="text-sm text-neutral-400">출처명</p>
         </div>
-        <h4 class="text-base font-semibold text-neutral-900 leading-snug mb-1 group-hover:text-primary-500 transition-colors line-clamp-2">기업은 왜 백년라이프 라이프 시니어를 주목할까? 최대 2줄까지…</h4>
-        <p class="text-sm text-neutral-400">출처명</p>
-      </article>
-
-      <!-- 기사 7~8: 데스크탑부터 표시 (lg: 4열 2행 완성) -->
-      <article class="cursor-pointer group hidden lg:block">
-        <div class="aspect-video bg-neutral-100 rounded-card overflow-hidden mb-3">
-          <div class="w-full h-full bg-gradient-to-br from-neutral-50 to-neutral-200 group-hover:scale-105 transition-transform duration-300"></div>
-        </div>
-        <h4 class="text-base font-semibold text-neutral-900 leading-snug mb-1 group-hover:text-primary-500 transition-colors line-clamp-2">기업은 왜 백년라이프 라이프 시니어를 주목할까? 최대 2줄까지…</h4>
-        <p class="text-sm text-neutral-400">출처명</p>
-      </article>
-
-      <article class="cursor-pointer group hidden lg:block">
-        <div class="aspect-video bg-neutral-100 rounded-card overflow-hidden mb-3">
-          <div class="w-full h-full bg-gradient-to-br from-warm-grey-100 to-neutral-200 group-hover:scale-105 transition-transform duration-300"></div>
-        </div>
-        <h4 class="text-base font-semibold text-neutral-900 leading-snug mb-1 group-hover:text-primary-500 transition-colors line-clamp-2">기업은 왜 백년라이프 라이프 시니어를 주목할까? 최대 2줄까지…</h4>
-        <p class="text-sm text-neutral-400">출처명</p>
+        <i data-lucide="chevron-right" class="text-neutral-300 shrink-0" style="width:20px;height:20px;"></i>
       </article>
 
     </div>

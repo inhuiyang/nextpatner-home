@@ -15,6 +15,7 @@
 | 빌드 | Tailwind CLI (`npx tailwindcss`) |
 | 폰트 | Pretendard Variable (CDN) |
 | 언어 | 한국어 UI |
+| 아이콘 | 인라인 SVG (혼용) | **Lucide Icons** |
 
 ---
 

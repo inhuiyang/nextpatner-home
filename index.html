@@ -88,12 +88,12 @@
   </div>
 </div>
 
-<div class="max-w-content mx-auto px-4 md:px-6 lg:px-8 py-4 md:py-6 flex flex-col gap-4">
+<div class="max-w-content mx-auto px-4 md:px-6 lg:px-0 py-4 md:py-6 flex flex-col gap-4">
 
 <!-- ══════════════════════════════════════════
      ZONE 0 — 히어로 슬로건 (로그인 시 노출)
 ══════════════════════════════════════════ -->
-<div class="py-2">
+<div class="py-2 lg:px-8">
     <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-neutral-900 leading-tight mb-1">
       중장년 맞춤 일자리,
     </h1>
@@ -177,7 +177,7 @@
             </div>
           </div>
           <div class="flex flex-col gap-2 mt-auto">
-            <button class="np-btn np-btn-grey-stroke np-btn-sm w-full">카카오 채널 문의</button>
+            <button class="np-btn np-btn-grey-stroke np-btn-sm w-full">전화 상담 예약</button>
           </div>
         </div>
       </div>
@@ -237,13 +237,14 @@
       </button>
     </div>
   </div>
+  </div>
 </section>
 
 
 <!-- ══════════════════════════════════════════
      ZONE 3 그룹 — 채용공고 통합 영역
 ══════════════════════════════════════════ -->
-<div class="border-2 border-primary-500 rounded-2xl overflow-hidden bg-neutral-0">
+<div class="border border-neutral-200 rounded-2xl overflow-hidden bg-neutral-0">
 
 <!-- ZONE 3 — 맞춤 채용공고 -->
 <section id="zone3" class="py-10 md:py-16 bg-primary-50">
@@ -294,7 +295,7 @@
         </div>
 
         <!-- 채용 카드 3 -->
-        <div class="np-job-card md:col-span-2 lg:col-span-1">
+        <div class="np-job-card">
           <div class="flex items-center gap-2 mb-2">
             <span class="np-job-card-company">경기 화성시 병점구</span>
             <span class="np-job-card-urgency">마감 D-10</span>
@@ -302,6 +303,42 @@
           <h3 class="np-job-card-title mb-3">[반월동] 3등급 할아버지 케어하실 요양보호사 모집</h3>
           <p class="np-job-card-meta mb-1">화성시 | 공공일자리</p>
           <p class="np-job-card-pay mb-4">연봉 2800만원 ~ 3200만원</p>
+          <button class="np-btn np-btn-grey-stroke np-btn-sm w-full mt-auto">자세히 보기</button>
+        </div>
+
+        <!-- 채용 카드 4 -->
+        <div class="np-job-card">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="np-job-card-company">롯데마트</span>
+            <span class="np-job-card-urgency">마감 D-7</span>
+          </div>
+          <h3 class="np-job-card-title mb-3">식품매장 관리직 (경력자 우대)</h3>
+          <p class="np-job-card-meta mb-1">강서구 | 정규직 | 주 5일</p>
+          <p class="np-job-card-pay mb-4">연봉 3000만원 ~ 3500만원</p>
+          <button class="np-btn np-btn-grey-stroke np-btn-sm w-full mt-auto">자세히 보기</button>
+        </div>
+
+        <!-- 채용 카드 5 -->
+        <div class="np-job-card">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="np-job-card-company">한화생명</span>
+            <span class="np-job-card-urgency">마감 D-15</span>
+          </div>
+          <h3 class="np-job-card-title mb-3">보험설계사 (시니어 경력직 우대)</h3>
+          <p class="np-job-card-meta mb-1">종로구 | 위촉직</p>
+          <p class="np-job-card-pay mb-4">수수료 + 인센티브</p>
+          <button class="np-btn np-btn-grey-stroke np-btn-sm w-full mt-auto">자세히 보기</button>
+        </div>
+
+        <!-- 채용 카드 6 -->
+        <div class="np-job-card">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="np-job-card-company">서울시50플러스재단</span>
+            <span class="np-job-card-urgency">마감 D-20</span>
+          </div>
+          <h3 class="np-job-card-title mb-3">시니어 IT 활용 강사 모집</h3>
+          <p class="np-job-card-meta mb-1">은평구 | 파트타임 | 주 3일</p>
+          <p class="np-job-card-pay mb-4">시급 18,000원</p>
           <button class="np-btn np-btn-grey-stroke np-btn-sm w-full mt-auto">자세히 보기</button>
         </div>
 
@@ -324,8 +361,8 @@
   </div>
 </section>
 
-
 <hr class="np-divider-thick">
+
 <!-- ZONE 3-B — 인기 공고 -->
 <section class="py-10 md:py-16">
   <div class="px-5 md:px-8">
@@ -410,13 +447,12 @@
       </div>
 
     </div>
-    </div>
 
   </div>
 </section>
 
-
 <hr class="np-divider-thick">
+
 <!-- ZONE 3-C — 프로젝트·프리랜서 공고 -->
 <section id="zone-project" class="py-10 md:py-16">
   <div class="px-5 md:px-8">
@@ -434,46 +470,86 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 
-      <div class="np-job-card">
-        <span class="np-badge np-badge-info self-start mb-3">프로젝트</span>
-        <div class="flex items-center gap-2 mb-2">
-          <span class="np-job-card-company">시니어넷</span>
-          <span class="np-job-card-urgency">마감 D-7</span>
-        </div>
-        <h3 class="np-job-card-title mb-3">시니어 온라인 강사 콘텐츠 제작 프로젝트</h3>
-        <p class="np-job-card-meta mb-1">온라인 | 재택 가능</p>
-        <p class="np-job-card-duration mb-1">기간 3개월</p>
-        <p class="np-job-card-pay mb-4">월 200만원</p>
-        <button class="np-btn np-btn-grey-stroke np-btn-sm w-full mt-auto">자세히 보기</button>
-      </div>
+          <div class="np-job-card">
+            <span class="np-badge np-badge-info self-start mb-3">프로젝트</span>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="np-job-card-company">시니어넷</span>
+              <span class="np-job-card-urgency">마감 D-7</span>
+            </div>
+            <h3 class="np-job-card-title mb-3">시니어 온라인 강사 콘텐츠 제작 프로젝트</h3>
+            <p class="np-job-card-meta mb-1">온라인 | 재택 가능</p>
+            <p class="np-job-card-duration mb-1">기간 3개월</p>
+            <p class="np-job-card-pay mb-4">월 200만원</p>
+            <button class="np-btn np-btn-grey-stroke np-btn-sm w-full mt-auto">자세히 보기</button>
+          </div>
 
-      <div class="np-job-card">
-        <span class="np-badge np-badge-info self-start mb-3">프로젝트</span>
-        <div class="flex items-center gap-2 mb-2">
-          <span class="np-job-card-company">케어링크</span>
-          <span class="np-job-card-urgency">마감 D-14</span>
-        </div>
-        <h3 class="np-job-card-title mb-3">어르신 방문 건강관리 프리랜서 간호사 모집</h3>
-        <p class="np-job-card-meta mb-1">서울 전 지역 | 방문 근무</p>
-        <p class="np-job-card-duration mb-1">기간 6개월</p>
-        <p class="np-job-card-pay mb-4">건당 5만원</p>
-        <button class="np-btn np-btn-grey-stroke np-btn-sm w-full mt-auto">자세히 보기</button>
-      </div>
+          <div class="np-job-card">
+            <span class="np-badge np-badge-info self-start mb-3">프로젝트</span>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="np-job-card-company">케어링크</span>
+              <span class="np-job-card-urgency">마감 D-14</span>
+            </div>
+            <h3 class="np-job-card-title mb-3">어르신 방문 건강관리 프리랜서 간호사 모집</h3>
+            <p class="np-job-card-meta mb-1">서울 전 지역 | 방문 근무</p>
+            <p class="np-job-card-duration mb-1">기간 6개월</p>
+            <p class="np-job-card-pay mb-4">건당 5만원</p>
+            <button class="np-btn np-btn-grey-stroke np-btn-sm w-full mt-auto">자세히 보기</button>
+          </div>
 
-      <div class="np-job-card">
-        <span class="np-badge np-badge-info self-start mb-3">프로젝트</span>
-        <div class="flex items-center gap-2 mb-2">
-          <span class="np-job-card-company">에듀시니어</span>
-          <span class="np-job-card-urgency">마감 D-21</span>
-        </div>
-        <h3 class="np-job-card-title mb-3">은퇴 전문직 대상 멘토링 프로그램 멘토 모집</h3>
-        <p class="np-job-card-meta mb-1">온라인 | 재택 가능</p>
-        <p class="np-job-card-duration mb-1">기간 1개월 (연장 가능)</p>
-        <p class="np-job-card-pay mb-4">회당 10만원</p>
-        <button class="np-btn np-btn-grey-stroke np-btn-sm w-full mt-auto">자세히 보기</button>
-      </div>
+          <div class="np-job-card">
+            <span class="np-badge np-badge-info self-start mb-3">프로젝트</span>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="np-job-card-company">에듀시니어</span>
+              <span class="np-job-card-urgency">마감 D-21</span>
+            </div>
+            <h3 class="np-job-card-title mb-3">은퇴 전문직 대상 멘토링 프로그램 멘토 모집</h3>
+            <p class="np-job-card-meta mb-1">온라인 | 재택 가능</p>
+            <p class="np-job-card-duration mb-1">기간 1개월 (연장 가능)</p>
+            <p class="np-job-card-pay mb-4">회당 10만원</p>
+            <button class="np-btn np-btn-grey-stroke np-btn-sm w-full mt-auto">자세히 보기</button>
+          </div>
+
+          <div class="np-job-card">
+            <span class="np-badge np-badge-info self-start mb-3">프로젝트</span>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="np-job-card-company">한국노인인력개발원</span>
+              <span class="np-job-card-urgency">마감 D-11</span>
+            </div>
+            <h3 class="np-job-card-title mb-3">시니어 생활지원 상담사 파견 프로젝트</h3>
+            <p class="np-job-card-meta mb-1">서울 전 지역 | 방문 근무</p>
+            <p class="np-job-card-duration mb-1">기간 3개월</p>
+            <p class="np-job-card-pay mb-4">월 180만원</p>
+            <button class="np-btn np-btn-grey-stroke np-btn-sm w-full mt-auto">자세히 보기</button>
+          </div>
+
+          <div class="np-job-card">
+            <span class="np-badge np-badge-info self-start mb-3">프로젝트</span>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="np-job-card-company">KB국민은행</span>
+              <span class="np-job-card-urgency">마감 D-5</span>
+            </div>
+            <h3 class="np-job-card-title mb-3">금융상품 설명회 프리랜서 강사 모집</h3>
+            <p class="np-job-card-meta mb-1">강남구 | 재택 가능</p>
+            <p class="np-job-card-duration mb-1">기간 2개월</p>
+            <p class="np-job-card-pay mb-4">회당 15만원</p>
+            <button class="np-btn np-btn-grey-stroke np-btn-sm w-full mt-auto">자세히 보기</button>
+          </div>
+
+          <div class="np-job-card">
+            <span class="np-badge np-badge-info self-start mb-3">프로젝트</span>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="np-job-card-company">나눔로또재단</span>
+              <span class="np-job-card-urgency">마감 D-18</span>
+            </div>
+            <h3 class="np-job-card-title mb-3">복권 판매점 순회 관리 위탁 계약</h3>
+            <p class="np-job-card-meta mb-1">경기 전 지역 | 방문 근무</p>
+            <p class="np-job-card-duration mb-1">기간 6개월</p>
+            <p class="np-job-card-pay mb-4">월 220만원</p>
+            <button class="np-btn np-btn-grey-stroke np-btn-sm w-full mt-auto">자세히 보기</button>
+          </div>
 
     </div>
+
   </div>
 </section>
 
@@ -481,9 +557,9 @@
 
 
 <!-- ══════════════════════════════════════════
-     ZONE 4 — 구직에 도움이 되는 정보 (현행 유지)
+     ZONE 4 — 구직에 도움이 되는 정보
 ══════════════════════════════════════════ -->
-<section class="border border-neutral-200 rounded-2xl overflow-hidden bg-neutral-0 py-10 md:py-16">
+<section class="border border-neutral-200 rounded-2xl overflow-hidden bg-neutral-0 py-8 md:py-10">
   <div class="px-5 md:px-8">
 
     <!-- 섹션 헤더 -->
@@ -552,9 +628,9 @@
 
 
 <!-- ══════════════════════════════════════════
-     ZONE 4-C — 일자리 관련 기사 (2열 × 3행 = 6건)
+     ZONE 4-C — 일자리 관련 기사
 ══════════════════════════════════════════ -->
-<section class="border border-neutral-200 rounded-2xl overflow-hidden bg-neutral-0 py-10 md:py-16">
+<section class="border border-neutral-200 rounded-2xl overflow-hidden bg-neutral-0 py-8 md:py-10">
   <div class="px-5 md:px-8">
 
     <!-- 섹션 헤더 -->

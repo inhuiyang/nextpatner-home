@@ -16,10 +16,7 @@
 <header class="np-header">
   <div class="np-header-inner">
     <a href="#" class="flex items-center gap-2 shrink-0">
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-        <path d="M16 2L28.7 9.5V24.5L16 32L3.3 24.5V9.5L16 2Z" fill="#ff7f65"/>
-        <path d="M11 10h2.5l5 12H16l-1.2-3H10l-1.2 3H6.5L11 10Zm2.8 7-1.8-4.5L10.2 17h3.6Z" fill="white"/>
-      </svg>
+      <img src="img/symbol.png" width="32" height="32" alt="NextPartner" />
       <span class="text-xl font-bold text-neutral-900 tracking-tight">NextPartner</span>
     </a>
     <nav class="np-header-nav">
@@ -39,23 +36,64 @@
         <i data-lucide="log-out" class="w-5 h-5"></i>
       </button>
     </div>
-    <!-- Mobile: 로그인 상태 -->
-    <div class="ml-auto flex md:hidden items-center gap-1">
-      <div class="w-8 h-8 rounded-full bg-primary-100 flex items-center justify-center shrink-0 text-sm font-bold text-primary-500">양</div>
-      <span class="text-sm text-neutral-600">양인희님</span>
-      <button class="flex items-center justify-center w-10 h-10 text-neutral-400 rounded-button hover:bg-neutral-50 hover:text-neutral-800 transition-colors" aria-label="로그아웃">
-        <i data-lucide="log-out" class="w-5 h-5"></i>
-      </button>
-    </div>
+    <!-- Mobile: 햄버거 버튼 -->
+    <button class="ml-auto md:hidden flex items-center justify-center w-10 h-10 text-neutral-800 rounded-button hover:bg-neutral-50 transition-colors" id="mobile-menu-btn" aria-label="메뉴 열기">
+      <i data-lucide="menu" class="w-6 h-6"></i>
+    </button>
   </div>
 </header>
 
-<div class="max-w-content mx-auto py-4 md:py-6 flex flex-col gap-4">
+<!-- ══════════════════════════════════════════
+     MOBILE DRAWER MENU
+══════════════════════════════════════════ -->
+<div id="mobile-menu-overlay" class="fixed inset-0 z-[100] hidden" aria-hidden="true">
+  <!-- 배경 딤 -->
+  <div id="mobile-menu-backdrop" class="absolute inset-0 bg-black/40 transition-opacity"></div>
+  <!-- 드로어 패널 (우측) -->
+  <div id="mobile-menu-panel" class="absolute top-0 right-0 bottom-0 w-72 bg-white flex flex-col shadow-2xl translate-x-full transition-transform duration-300 ease-out">
+
+    <!-- 드로어 헤더 -->
+    <div class="flex items-center justify-between px-5 h-14 border-b border-neutral-100 shrink-0">
+      <span class="text-base font-bold text-neutral-900">메뉴</span>
+      <button id="mobile-menu-close" class="flex items-center justify-center w-10 h-10 text-neutral-400 rounded-button hover:bg-neutral-50 transition-colors" aria-label="메뉴 닫기">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+    </div>
+
+    <!-- 사용자 정보 -->
+    <div class="flex items-center gap-3 px-5 py-4 border-b border-neutral-100 shrink-0">
+      <div class="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center text-base font-bold text-primary-500 shrink-0">양</div>
+      <span class="text-base font-semibold text-neutral-900">양인희님</span>
+      <button class="ml-auto flex items-center justify-center w-10 h-10 text-neutral-400 rounded-button hover:bg-neutral-50 hover:text-neutral-800 transition-colors" aria-label="로그아웃">
+        <i data-lucide="log-out" class="w-5 h-5"></i>
+      </button>
+    </div>
+
+    <!-- 메인 네비게이션 (채용·프로젝트·이력서) -->
+    <nav class="flex flex-col px-3 pt-3 pb-2">
+      <a href="#zone3" onclick="closeMobileMenu()" class="flex items-center px-4 py-3.5 text-lg font-semibold text-primary-500 rounded-button hover:bg-primary-50 transition-colors cursor-pointer">채용</a>
+      <a href="#zone-project" onclick="closeMobileMenu()" class="flex items-center px-4 py-3.5 text-lg font-semibold text-primary-500 rounded-button hover:bg-primary-50 transition-colors cursor-pointer">프로젝트</a>
+      <a class="flex items-center px-4 py-3.5 text-lg font-semibold text-primary-500 rounded-button hover:bg-primary-50 transition-colors cursor-pointer">이력서</a>
+    </nav>
+
+    <div class="h-px bg-neutral-100 mx-5"></div>
+
+    <!-- 서브 네비게이션 -->
+    <nav class="flex flex-col px-3 pt-2 pb-3">
+      <a class="flex items-center px-4 py-3 text-base text-neutral-600 rounded-button hover:bg-neutral-50 transition-colors cursor-pointer">서비스소개</a>
+      <a class="flex items-center px-4 py-3 text-base text-neutral-600 rounded-button hover:bg-neutral-50 transition-colors cursor-pointer">공지사항</a>
+      <a class="flex items-center px-4 py-3 text-base text-neutral-600 rounded-button hover:bg-neutral-50 transition-colors cursor-pointer">FAQ</a>
+    </nav>
+
+  </div>
+</div>
+
+<div class="max-w-content mx-auto px-4 md:px-6 lg:px-8 py-4 md:py-6 flex flex-col gap-4">
 
 <!-- ══════════════════════════════════════════
      ZONE 0 — 히어로 슬로건 (로그인 시 노출)
 ══════════════════════════════════════════ -->
-<div class="px-5 md:px-8 py-2">
+<div class="py-2">
     <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-neutral-900 leading-tight mb-1">
       중장년 맞춤 일자리,
     </h1>
@@ -150,6 +188,22 @@
 
 
 <!-- ══════════════════════════════════════════
+     ZONE 2 — 넥스트 액션 배너 (조건부 노출)
+══════════════════════════════════════════ -->
+<div id="next-action-banner" class="rounded-2xl overflow-hidden" style="background-color:#FAECE7;">
+  <div class="flex items-center gap-3 px-5 py-4">
+    <i data-lucide="file-warning" class="w-5 h-5 shrink-0" style="color:#712B13;"></i>
+    <p class="flex-1 text-base font-medium leading-snug" style="color:#712B13;">
+      이력서 완성도가 75%입니다. 이력서를 완성하면 더 많은 일자리를 추천받을 수 있어요!
+    </p>
+    <button
+      class="np-btn np-btn-primary np-btn-sm shrink-0"
+    >이력서 완성하기</button>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════
      ZONE 1-B — 메인 이벤트 배너
 ══════════════════════════════════════════ -->
 <section class="border border-neutral-200 rounded-2xl overflow-hidden bg-neutral-0" id="main-event-banner">
@@ -184,22 +238,6 @@
     </div>
   </div>
 </section>
-
-
-<!-- ══════════════════════════════════════════
-     ZONE 2 — 넥스트 액션 배너 (조건부 노출)
-══════════════════════════════════════════ -->
-<div id="next-action-banner" class="rounded-2xl overflow-hidden" style="background-color:#FAECE7;">
-  <div class="flex items-center gap-3 px-5 py-4">
-    <i data-lucide="file-warning" class="w-5 h-5 shrink-0" style="color:#712B13;"></i>
-    <p class="flex-1 text-base font-medium leading-snug" style="color:#712B13;">
-      이력서 완성도가 75%입니다. 이력서를 완성하면 더 많은 일자리를 추천받을 수 있어요!
-    </p>
-    <button
-      class="np-btn np-btn-primary np-btn-sm shrink-0"
-    >이력서 완성하기</button>
-  </div>
-</div>
 
 
 <!-- ══════════════════════════════════════════
@@ -603,10 +641,7 @@
         <p class="np-footer-info mt-3">© 2026 NextPartner. All rights reserved.</p>
       </div>
       <div class="flex items-center gap-3">
-        <svg width="40" height="40" viewBox="0 0 32 32" fill="none">
-          <path d="M16 2L28.7 9.5V24.5L16 32L3.3 24.5V9.5L16 2Z" fill="#ff7f65"/>
-          <path d="M11 10h2.5l5 12H16l-1.2-3H10l-1.2 3H6.5L11 10Zm2.8 7-1.8-4.5L10.2 17h3.6Z" fill="white"/>
-        </svg>
+        <img src="img/symbol.png" width="40" height="40" alt="NextPartner" />
         <div>
           <p class="text-base font-bold text-neutral-900 leading-tight">NextPartner</p>
           <p class="text-sm text-neutral-400 leading-tight">Senior Talent Marketplace</p>
@@ -651,6 +686,38 @@
 
 
 <script>
+// ── 모바일 드로어 메뉴 ──
+(function () {
+  var overlay = document.getElementById('mobile-menu-overlay');
+  var panel   = document.getElementById('mobile-menu-panel');
+  var backdrop = document.getElementById('mobile-menu-backdrop');
+
+  function open() {
+    overlay.classList.remove('hidden');
+    overlay.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    requestAnimationFrame(function () {
+      panel.style.transform = 'translateX(0)';
+      backdrop.style.opacity = '1';
+    });
+  }
+
+  window.closeMobileMenu = function () {
+    panel.style.transform = '';
+    backdrop.style.opacity = '';
+    setTimeout(function () {
+      overlay.classList.add('hidden');
+      overlay.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }, 300);
+  };
+
+  document.getElementById('mobile-menu-btn').addEventListener('click', open);
+  document.getElementById('mobile-menu-close').addEventListener('click', closeMobileMenu);
+  backdrop.addEventListener('click', closeMobileMenu);
+})();
+
+
 // GNB 클릭 → 해당 섹션으로 스크롤
 function activateTab(tab) {
   var target = document.getElementById(tab === 'project' ? 'zone-project' : 'zone3');

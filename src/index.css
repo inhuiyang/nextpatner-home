@@ -454,7 +454,7 @@
   }
   .np-header-inner {
     @apply max-w-content mx-auto px-4 md:px-6
-           flex items-center h-14 md:h-16 gap-4 md:gap-8;
+           flex items-center h-16 md:h-20 gap-4 md:gap-8;
   }
   .np-header-nav {
     @apply hidden md:flex items-center gap-1 ml-auto;
@@ -468,17 +468,20 @@
            hover:bg-neutral-50 transition-colors duration-[120ms] ease-out;
   }
   .np-nav-link {
-    @apply px-3 py-2 text-lg text-neutral-500 font-medium rounded-button cursor-pointer
+    @apply px-3 py-2 text-xl text-neutral-500 font-medium rounded-button cursor-pointer
            hover:text-neutral-900 hover:bg-neutral-50
            transition-colors duration-[120ms] ease-out;
   }
   .np-nav-link-job {
-    @apply px-3 py-2 text-lg font-bold text-neutral-900 rounded-button cursor-pointer
+    @apply px-3 py-2 text-xl font-bold text-neutral-900 rounded-button cursor-pointer
            hover:text-primary-500 hover:bg-primary-50
            transition-colors duration-[120ms] ease-out;
   }
   .np-nav-link.active     { @apply text-primary-500 bg-primary-50; }
   .np-nav-link-job.active { @apply text-primary-500 bg-primary-50; }
+  .np-nav-label {
+    @apply px-2 text-xs font-bold text-neutral-400 tracking-widest whitespace-nowrap;
+  }
   .np-header-divider {
     @apply w-px h-4 bg-neutral-200 mx-1;
   }
@@ -604,6 +607,10 @@
     @apply border-primary-500 shadow-[0_4px_16px_rgba(0,0,0,0.08)] -translate-y-0.5;
   }
 
+  .np-job-card-project:hover {
+    @apply border-info-500;
+  }
+
   .np-job-card-recommended {
     border: 2px solid transparent;
     background:
@@ -612,17 +619,17 @@
   }
   .np-job-card-badge {
     @apply inline-flex items-center px-3 py-1 rounded-pill
-           text-sm font-bold text-neutral-0;
+           text-base font-bold text-neutral-0;
     background: linear-gradient(135deg, #FFAA00 0%, #FF2D9E 33%);
   }
   .np-job-card-urgency {
-    @apply text-sm font-bold text-primary-500;
+    @apply text-base font-bold text-primary-500;
   }
   .np-job-card-deadline {
-    @apply text-sm font-semibold text-primary-500;
+    @apply text-base font-semibold text-primary-500;
   }
   .np-job-card-title {
-    @apply text-xl font-bold text-neutral-900;
+    @apply text-2xl font-bold text-neutral-900;
     line-height: 1.375;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -632,16 +639,16 @@
     min-height: calc(1.375em * 2);
   }
   .np-job-card-company {
-    @apply text-sm text-neutral-400;
+    @apply text-base text-neutral-400;
   }
   .np-job-card-meta {
-    @apply text-base text-neutral-600;
+    @apply text-lg text-neutral-600;
   }
   .np-job-card-pay {
-    @apply text-base text-neutral-600;
+    @apply text-lg text-neutral-600;
   }
   .np-job-card-register {
-    @apply text-sm text-neutral-400;
+    @apply text-base text-neutral-400;
   }
   .np-job-card-reasons-box {
     @apply bg-primary-50 rounded-card p-3;
@@ -650,17 +657,28 @@
     @apply flex flex-col gap-1;
   }
   .np-job-card-reason {
-    @apply text-base text-primary-500;
+    @apply text-lg text-primary-500;
   }
   .np-job-card-reason::before {
     content: '• ';
   }
   .np-job-card-type {
-    @apply inline-flex items-center px-2 py-0.5 rounded-badge
-           text-sm font-bold text-neutral-600 bg-warm-grey-100;
+    @apply inline-flex items-center px-2 py-1 rounded-badge
+           text-base font-bold text-neutral-600 bg-warm-grey-100;
   }
   .np-job-card-duration {
-    @apply text-base text-neutral-600;
+    @apply text-lg text-neutral-600;
+  }
+  .np-job-card-list {
+    @apply flex flex-row items-start gap-5;
+  }
+  .np-job-card-list .np-job-card-title {
+    min-height: 0;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+  .np-job-card-list .np-job-card-reasons {
+    @apply flex-row flex-wrap gap-x-4 gap-y-1;
   }
 
   /* ── Footer ── */

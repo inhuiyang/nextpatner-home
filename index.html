@@ -96,8 +96,10 @@
 <!-- ══════════════════════════════════════════
      메인 레이아웃 — 콘텐츠 + AI 사이드바
 ══════════════════════════════════════════ -->
-<div class="max-w-content mx-auto px-4 md:px-6 lg:px-8">
+<div class="flex items-start justify-center gap-4 px-4 md:px-6 lg:px-8">
 
+<!-- 콘텐츠 컬럼 -->
+<div class="flex-1 min-w-0 max-w-content">
 <div class="py-4 md:py-6 flex flex-col gap-4 md:gap-6">
 
 <!-- ══════════════════════════════════════════
@@ -785,8 +787,10 @@
 
 </div><!-- /zone 4 inner -->
 
+</div><!-- /콘텐츠 컬럼 -->
+
 <!-- AI 취업 도구 사이드바 (데스크탑 전용) -->
-<aside class="hidden lg:flex flex-col items-center shrink-0 bg-neutral-0 border border-neutral-200 rounded-card py-5 px-3 gap-4 fixed z-30" style="box-shadow:0 4px 16px rgba(0,0,0,0.08);top:96px;right:max(16px, calc((100vw - 1212px) / 2 - 88px))">
+<aside class="hidden lg:flex flex-col items-center shrink-0 bg-neutral-0 border border-neutral-200 rounded-card py-5 px-3 gap-4 sticky top-24 self-start mt-4" style="box-shadow:0 4px 16px rgba(0,0,0,0.08)">
   <!-- AI 모의면접 -->
   <a href="#" class="flex flex-col items-center gap-1.5 cursor-pointer group">
     <div class="np-tooltip-wrap">
@@ -839,7 +843,7 @@
   </a>
 </aside>
 
-</div><!-- /max-w-content wrapper -->
+</div><!-- /메인 레이아웃 flex -->
 
 <!-- ══════════════════════════════════════════
      FOOTER

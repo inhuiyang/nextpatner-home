@@ -45,69 +45,8 @@
   </div>
 </header>
 
-<!-- AI 취업 도구 툴바 -->
-<nav class="bg-neutral-0 border-b border-neutral-200 shadow-sm">
-  <div class="max-w-content mx-auto px-4 md:px-6 lg:px-8 py-5 md:py-6">
-    <p class="flex items-center justify-center gap-1.5 text-base text-neutral-600 font-medium mb-4">
-      <i data-lucide="sparkles" class="w-4 h-4 text-primary-500 shrink-0"></i>
-      AI 취업 도구를 사용해서 빠르고 쉽게 취업하세요
-    </p>
-    <div class="flex items-start justify-around md:justify-center md:gap-12">
-      <!-- AI 모의면접 -->
-      <a href="#" class="flex flex-col items-center gap-1.5 cursor-pointer group">
-        <div class="np-tooltip-wrap">
-          <div class="w-14 h-14 rounded-full bg-info-100 flex items-center justify-center group-hover:bg-info-500 transition-colors">
-            <i data-lucide="mic" class="w-7 h-7 text-info-500 group-hover:text-white transition-colors"></i>
-          </div>
-          <div class="np-tooltip np-tooltip-bottom" style="white-space:normal;width:180px;text-align:center">실제 면접처럼 AI와 연습하고 피드백을 받아보세요</div>
-        </div>
-        <span class="text-lg text-neutral-600 font-medium text-center">AI 모의면접</span>
-      </a>
-      <!-- AI 복장체크 -->
-      <a href="#" class="flex flex-col items-center gap-1.5 cursor-pointer group">
-        <div class="np-tooltip-wrap">
-          <div class="w-14 h-14 rounded-full bg-primary-100 flex items-center justify-center group-hover:bg-primary-500 transition-colors">
-            <i data-lucide="scan" class="w-7 h-7 text-primary-500 group-hover:text-white transition-colors"></i>
-          </div>
-          <div class="np-tooltip np-tooltip-bottom" style="white-space:normal;width:180px;text-align:center">사진 한 장으로 면접 복장이 적합한지 확인하세요</div>
-        </div>
-        <span class="text-lg text-neutral-600 font-medium text-center">AI 복장체크</span>
-      </a>
-      <!-- AI 증명사진 -->
-      <a href="#" class="flex flex-col items-center gap-1.5 cursor-pointer group">
-        <div class="np-tooltip-wrap">
-          <div class="w-14 h-14 rounded-full bg-warning-100 flex items-center justify-center group-hover:bg-warning-500 transition-colors">
-            <i data-lucide="camera" class="w-7 h-7 text-warning-500 group-hover:text-white transition-colors"></i>
-          </div>
-          <div class="np-tooltip np-tooltip-bottom" style="white-space:normal;width:180px;text-align:center">스마트폰 사진으로 깔끔한 증명사진을 만들어보세요</div>
-        </div>
-        <span class="text-lg text-neutral-600 font-medium text-center">AI 증명사진</span>
-      </a>
-      <!-- AI 자기소개서 -->
-      <a href="#" class="flex flex-col items-center gap-1.5 cursor-pointer group">
-        <div class="np-tooltip-wrap">
-          <div class="w-14 h-14 rounded-full bg-success-100 flex items-center justify-center group-hover:bg-success-500 transition-colors">
-            <i data-lucide="pen-line" class="w-7 h-7 text-success-500 group-hover:text-white transition-colors"></i>
-          </div>
-          <div class="np-tooltip np-tooltip-bottom" style="white-space:normal;width:180px;text-align:center">내 경력을 입력하면 AI가 자기소개서를 작성해드려요</div>
-        </div>
-        <span class="text-lg text-neutral-600 font-medium text-center">AI 자기소개서</span>
-      </a>
-      <!-- 기업 브리핑 -->
-      <a href="#" class="flex flex-col items-center gap-1.5 cursor-pointer group">
-        <div class="np-tooltip-wrap">
-          <div class="w-14 h-14 rounded-full bg-neutral-100 flex items-center justify-center group-hover:bg-neutral-800 transition-colors">
-            <i data-lucide="building-2" class="w-7 h-7 text-neutral-600 group-hover:text-white transition-colors"></i>
-          </div>
-          <div class="np-tooltip np-tooltip-bottom" style="white-space:normal;width:180px;text-align:center">지원 전에 기업 정보를 AI로 빠르게 파악하세요</div>
-        </div>
-        <span class="text-lg text-neutral-600 font-medium text-center">기업 브리핑</span>
-      </a>
-    </div>
-  </div>
-</nav>
-
 </div><!-- /sticky wrapper -->
+
 
 <!-- ══════════════════════════════════════════
      MOBILE DRAWER MENU
@@ -154,7 +93,12 @@
   </div>
 </div>
 
-<div class="max-w-content mx-auto px-4 md:px-6 lg:px-0 py-4 md:py-6 flex flex-col gap-4 md:gap-6">
+<!-- ══════════════════════════════════════════
+     메인 레이아웃 — 콘텐츠 + AI 사이드바
+══════════════════════════════════════════ -->
+<div class="max-w-content mx-auto px-4 md:px-6 lg:px-8">
+
+<div class="py-4 md:py-6 flex flex-col gap-4 md:gap-6">
 
 <!-- ══════════════════════════════════════════
      ZONE 0 — 히어로 슬로건 (로그인 시 노출)
@@ -769,10 +713,10 @@
 </section>
 
 
-</div><!-- /max-w-content wrapper -->
+</div><!-- /zone 0-3 inner -->
 
 
-<div class="max-w-content mx-auto px-4 md:px-6 lg:px-0 py-4 md:py-6 flex flex-col gap-4 md:gap-6">
+<div class="py-4 md:py-6 flex flex-col gap-4 md:gap-6">
 
 
 <!-- ══════════════════════════════════════════
@@ -839,7 +783,63 @@
 </section>
 
 
-</div><!-- /max-w-content wrapper 2 -->
+</div><!-- /zone 4 inner -->
+
+<!-- AI 취업 도구 사이드바 (데스크탑 전용) -->
+<aside class="hidden lg:flex flex-col items-center shrink-0 bg-neutral-0 border border-neutral-200 rounded-card py-5 px-3 gap-4 fixed z-30" style="box-shadow:0 4px 16px rgba(0,0,0,0.08);top:96px;right:max(16px, calc((100vw - 1212px) / 2 - 88px))">
+  <!-- AI 모의면접 -->
+  <a href="#" class="flex flex-col items-center gap-1.5 cursor-pointer group">
+    <div class="np-tooltip-wrap">
+      <div class="w-12 h-12 rounded-full bg-info-100 flex items-center justify-center group-hover:bg-info-500 transition-colors">
+        <i data-lucide="mic" class="w-6 h-6 text-info-500 group-hover:text-white transition-colors"></i>
+      </div>
+      <div class="np-tooltip np-tooltip-left" style="white-space:normal;width:160px;text-align:left">실제 면접처럼 AI와 연습하고 피드백을 받아보세요</div>
+    </div>
+    <span class="text-xs text-neutral-500 font-medium text-center leading-tight">AI<br>모의면접</span>
+  </a>
+  <!-- AI 자기소개서 -->
+  <a href="#" class="flex flex-col items-center gap-1.5 cursor-pointer group">
+    <div class="np-tooltip-wrap">
+      <div class="w-12 h-12 rounded-full bg-success-100 flex items-center justify-center group-hover:bg-success-500 transition-colors">
+        <i data-lucide="pen-line" class="w-6 h-6 text-success-500 group-hover:text-white transition-colors"></i>
+      </div>
+      <div class="np-tooltip np-tooltip-left" style="white-space:normal;width:160px;text-align:left">내 경력을 입력하면 AI가 자기소개서를 작성해드려요</div>
+    </div>
+    <span class="text-xs text-neutral-500 font-medium text-center leading-tight">AI<br>자기소개서</span>
+  </a>
+  <!-- AI 기업 브리핑 -->
+  <a href="#" class="flex flex-col items-center gap-1.5 cursor-pointer group">
+    <div class="np-tooltip-wrap">
+      <div class="w-12 h-12 rounded-full bg-neutral-100 flex items-center justify-center group-hover:bg-neutral-800 transition-colors">
+        <i data-lucide="building-2" class="w-6 h-6 text-neutral-600 group-hover:text-white transition-colors"></i>
+      </div>
+      <div class="np-tooltip np-tooltip-left" style="white-space:normal;width:160px;text-align:left">지원 전에 기업 정보를 AI로 빠르게 파악하세요</div>
+    </div>
+    <span class="text-xs text-neutral-500 font-medium text-center leading-tight">AI<br>기업 브리핑</span>
+  </a>
+  <!-- AI 증명사진 -->
+  <a href="#" class="flex flex-col items-center gap-1.5 cursor-pointer group">
+    <div class="np-tooltip-wrap">
+      <div class="w-12 h-12 rounded-full bg-warning-100 flex items-center justify-center group-hover:bg-warning-500 transition-colors">
+        <i data-lucide="camera" class="w-6 h-6 text-warning-500 group-hover:text-white transition-colors"></i>
+      </div>
+      <div class="np-tooltip np-tooltip-left" style="white-space:normal;width:160px;text-align:left">스마트폰 사진으로 깔끔한 증명사진을 만들어보세요</div>
+    </div>
+    <span class="text-xs text-neutral-500 font-medium text-center leading-tight">AI<br>증명사진</span>
+  </a>
+  <!-- AI 복장 점검 -->
+  <a href="#" class="flex flex-col items-center gap-1.5 cursor-pointer group">
+    <div class="np-tooltip-wrap">
+      <div class="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center group-hover:bg-primary-500 transition-colors">
+        <i data-lucide="scan" class="w-6 h-6 text-primary-500 group-hover:text-white transition-colors"></i>
+      </div>
+      <div class="np-tooltip np-tooltip-left" style="white-space:normal;width:160px;text-align:left">사진 한 장으로 면접 복장이 적합한지 확인하세요</div>
+    </div>
+    <span class="text-xs text-neutral-500 font-medium text-center leading-tight">AI<br>복장 점검</span>
+  </a>
+</aside>
+
+</div><!-- /max-w-content wrapper -->
 
 <!-- ══════════════════════════════════════════
      FOOTER
